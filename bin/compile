@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-echo "-----> Installing cmake"
+echo "-----> Installing CMake 3.11"
 
 # change to the the BUILD_DIR ($1)
 cd $1
 
 # download
-curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
+curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O
 
 # make dir
 mkdir -p /tmp/codon/vendor
