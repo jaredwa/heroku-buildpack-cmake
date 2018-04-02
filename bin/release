@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
-
 echo "---"
+echo "addons:"
+echo "config_vars:"
+echo "  PATH: $PATH:/app/jareda_vendor/cmake/bin"
+echo "default_process_types:"
