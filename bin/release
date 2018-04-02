@@ -1,5 +1,5 @@
 echo "---"
 echo "addons:"
 echo "config_vars:"
-echo "  PATH: $PATH:/app/vendor/cmake-3.11.0/bin"
+echo "  PATH: $PATH:/app/vendor/cmake-3.11.0/Exec"
 echo "default_process_types:"
