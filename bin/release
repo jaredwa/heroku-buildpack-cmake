@@ -4,5 +4,5 @@
 cat <<EOF
 ---
 config_vars:
-  PATH: $PATH:/app/vendor/cmake/bin
+  PATH: $PATH:/app/vendor/cmake-3.11.0/bin
 EOF
