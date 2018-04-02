@@ -13,4 +13,6 @@ curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O
 mkdir -p vendor/cmake
 
 # untar the binary to the directory we want
-tar -C vendor/cmake -xvf cmake-3.11.0.tar.gz
+tar -C vendor/ -xvf cmake-3.11.0.tar.gz
+
+ls vendor
