@@ -16,9 +16,11 @@ mkdir -p "$BUILD_DIR/.jareda_vendor/"
 
 cd $BUILD_DIR
 
+echo $BUILD_DIR
+
 # Install SWIG
 echo "-----> Installing CMake 3.11"
-curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O --output /tmp/swig.tar.gz
+curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O --output /tmp/cmake-3.11.0.tar.gz
 
 echo "CMake Downloaded"
 
