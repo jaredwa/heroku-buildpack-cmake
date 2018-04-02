@@ -25,6 +25,6 @@ curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O --output "$BUILD_DI
 echo "CMake Downloaded"
 
 echo "-----> Installing ..."
-tar xzf "$BUILD_DIR/cmake.tar.gz"
+tar xzf "$BUILD_DIR/.jareda_vendor/cmake.tar.gz"
 
 export PATH="$BUILD_DIR/.jareda_vendor/cmake/bin":$PATH
