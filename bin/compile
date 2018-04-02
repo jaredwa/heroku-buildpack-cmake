@@ -32,5 +32,5 @@ rm -rf "$BUILD_DIR/.jareda_vendor/cmake-3.11.0"
 mv /tmp/cmake-3.11.0 "$BUILD_DIR/.jareda_vendor/cmake"
 
 export PATH="$BUILD_DIR/.jareda_vendor/cmake/bin":$PATH
-echo ls "$BUILD_DIR/.jareda_vendor/"
+ls "$BUILD_DIR/.jareda_vendor/"
 echo $PATH
