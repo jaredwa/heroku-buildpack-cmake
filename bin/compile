@@ -1,22 +1,32 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
 
+set -e
+
+set -o errexit    # always exit on error
+set -o pipefail   # don't ignore exit codes when piping output
+set -o nounset    # fail on unset variables
+unset GIT_DIR     # Avoid GIT_DIR leak from previous build steps
+
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
+
+mkdir -p "$BUILD_DIR/.jareda_vendor/"
+
+cd $BUILD_DIR
+
+# Install SWIG
 echo "-----> Installing CMake 3.11"
-
-# change to the the BUILD_DIR ($1)
-cd $1
-
-# download
 curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O
 
-# make dir
-mkdir -p /tmp/codon/vendor
+echo "CMake Downloaded"
 
-# untar the binary to the directory we want
-tar -C /tmp/codon/vendor -xvf cmake-3.11.0.tar.gz
+echo "-----> Installing ..."
+tar xzf cmake-3.11.0.tar.gz -C /tmp
 
-debug=`ls /tmp/codon/vendor/bin`
-echo $debug
+rm -rf "$BUILD_DIR/.jareda_vendor/cmake-3.11.0"
 
-echo $PATH
+mv /tmp/3.11.0 "$BUILD_DIR/.jareda_vendor"
 
+export PATH="$BUILD_DIR/.jareda_vendor/cmake-3.11.0/bin":$PATH
