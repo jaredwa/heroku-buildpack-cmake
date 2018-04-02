@@ -15,5 +15,5 @@ mkdir -p vendor/cmake
 # untar the binary to the directory we want
 tar -C vendor/ -xvf cmake-3.11.0.tar.gz
 
-mkdir -p $build/.profile.d
-echo 'PATH=$PATH:$HOME/vendor/cmake/bin' > $build/.profile.d/go.sh
+mkdir -p .profile.d
+echo 'PATH=$PATH:$HOME/vendor/cmake/bin' > .profile.d/go.sh
