@@ -18,7 +18,7 @@ cd $BUILD_DIR
 
 echo $BUILD_DIR
 
-# Install SWIG
+# Install CMake
 echo "-----> Installing CMake 3.11"
 curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz --output /tmp/cmake.tar.gz
 
@@ -27,8 +27,8 @@ echo "CMake Downloaded"
 echo "-----> Installing ..."
 tar xzf /tmp/cmake.tar.gz -C /tmp
 
-rm -rf "$BUILD_DIR/.jareda_vendor/cmake"
+rm -rf "$BUILD_DIR/.jareda_vendor/cmake-3.11.0"
 
-mv /tmp/cmake "$BUILD_DIR/.jareda_vendor"
+mv /tmp/cmake-3.11.0 "$BUILD_DIR/.jareda_vendor/cmake"
 
 export PATH="$BUILD_DIR/.jareda_vendor/cmake/bin":$PATH
