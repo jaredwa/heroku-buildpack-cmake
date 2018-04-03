@@ -10,4 +10,4 @@ mkdir -p .jaredwa_vendor/
 tar -C .jaredwa_vendor -xvf cmake.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/.jaredwa_vendor/cmake-3.11.0-Linux-x86_64/bin' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/.jaredwa_vendor/cmake-3.11.0-Linux-x86_64/bin' > .profile.d/a.sh
