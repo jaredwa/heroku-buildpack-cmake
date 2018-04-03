@@ -3,11 +3,11 @@ echo "-----> Installing CMake 3.9.1"
 # change to the the BUILD_DIR ($1)
 cd $1
 # download the binary (-O) silently (-s)
-wget https://s3.amazonaws.com/betterment-heroku/cmake.tar.gz -O cmake.tar.gz
+wget https://cmake.org/files/v3.11/cmake-3.11.0-Linux-x86_64.tar.gz -O cmake.tar.gz
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/cmake
 # untar the binary to the directory we want
 tar -C vendor/cmake -xvf cmake.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/vendor/cmake/cmake-3.9.1/Auxiliary/bash-completion/' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/vendor/cmake/cmake-3.11.0-Linux-x86_64/bin' > .profile.d/go.sh
