@@ -10,4 +10,4 @@ mkdir -p vendor/cmake
 tar -C vendor/cmake -xvf cmake.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/vendor/cmake/bin' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/vendor/cmake/cmake-3.9.1/Auxiliary/bash-completion/cmake' > .profile.d/go.sh
