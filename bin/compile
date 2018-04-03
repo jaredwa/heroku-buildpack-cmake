@@ -10,10 +10,10 @@ cd $1
 curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O
 
 # make a directory to untar (like unzip) the binary
-mkdir -p vendor/cmake
+mkdir -p .vendor/cmake
 
 # untar the binary to the directory we want
-tar -C vendor/ -xvf cmake-3.11.0.tar.gz
+tar -C .vendor/ -xvf cmake-3.11.0.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/vendor/cmake-3.11.0/bin' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/.vendor/cmake-3.11.0/' > .profile.d/go.sh
