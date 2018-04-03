@@ -1,19 +1,13 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
-
-echo "-----> Installing CMake 3.11.0"
-
+echo "-----> Installing CMake 3.9.1"
 # change to the the BUILD_DIR ($1)
 cd $1
-
-# download the mruby binary (-O) silently (-s)
-curl wget https://s3.amazonaws.com/betterment-heroku/cmake.tar.gz -s -O
-
+# download the binary (-O) silently (-s)
+wget https://s3.amazonaws.com/betterment-heroku/cmake.tar.gz -O cmake.tar.gz
 # make a directory to untar (like unzip) the binary
-mkdir -p .vendor/cmake
-
+mkdir -p vendor/cmake
 # untar the binary to the directory we want
-tar -C .vendor/ -xvf cmake.tar.gz
+tar -C vendor/cmake -xvf cmake.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/.vendor/cmake/bin' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/vendor/cmake/bin' > .profile.d/go.sh
