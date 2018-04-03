@@ -10,6 +10,4 @@ mkdir -p .jaredwa_vendor/
 tar -C .jaredwa_vendor -xvf cmake.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/.jaredwa_vendor/cmake-3.11.0-Linux-x86_64/bin' > .profile.d/a.sh
-echo 'PATH=$PATH:$HOME/.jp_vendor/swig/bin' > .profile.d/a.sh
-echo 'SWIG_LIB=$PATH:$HOME/.jp_vendor/swig/share/swig/2.0.5' > .profile.d/a.sh
+echo 'PATH=$PATH:$HOME/.jaredwa_vendor/cmake-3.11.0-Linux-x86_64/bin:$HOME/.jp_vendor/swig/bin\nSWIG_LIB=$PATH:$HOME/.jp_vendor/swig/share/swig/2.0.5' > .profile.d/a.sh
