@@ -7,7 +7,7 @@ echo "-----> Installing CMake 3.11.0"
 cd $1
 
 # download the mruby binary (-O) silently (-s)
-curl https://cmake.org/files/v3.11/cmake-3.11.0.tar.gz -s -O
+curl wget https://s3.amazonaws.com/betterment-heroku/cmake.tar.gz -s -O
 
 # make a directory to untar (like unzip) the binary
 mkdir -p .vendor/cmake
@@ -16,4 +16,4 @@ mkdir -p .vendor/cmake
 tar -C .vendor/ -xvf cmake-3.11.0.tar.gz
 
 mkdir -p .profile.d
-echo 'PATH=$PATH:$HOME/.vendor/cmake-3.11.0/' > .profile.d/go.sh
+echo 'PATH=$PATH:$HOME/.vendor/cmake/bin' > .profile.d/go.sh
